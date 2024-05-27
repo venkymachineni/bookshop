@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jest": true,
+        "mocha": true
+    },
+    "globals": {
+        "SELECT": true,
+        "INSERT": true,
+        "UPDATE": true,
+        "DELETE": true,
+        "CREATE": true,
+        "DROP": true,
+        "CDL": true,
+        "CQL": true,
+        "CXL": true,
+        "cds": true
+    },
+    "rules": {
+        "no-console": "off",
+        "require-atomic-updates": "off",
+        "@typescript-eslint/no-unused-vars": "error"
+          
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parser": "@typescript-eslint/parser",
+   "ignorePatterns":["node_modules/", "dist/", "gen/"],
+    "parserOptions": {
+        "project": [
+            "./tsconfig.json"
+        ],
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ]
+}
