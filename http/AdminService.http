@@ -1,0 +1,44 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### AdminService.Authors
+GET {{server}}/odata/v4/admin/Authors
+Content-Type: application/json
+{{auth}}
+
+
+### AdminService.Authors
+POST {{server}}/odata/v4/admin/Authors
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": 7650268,
+  "name": "name-7650268",
+  "createdAt": "2018-04-16T18:30:00.000Z",
+  "createdBy": "createdBy.4jyzg@example.net",
+  "modifiedAt": "2010-05-05T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.4jyzg@example.com"
+}
+
+
+### AdminService.Authors
+PATCH {{server}}/odata/v4/admin/Authors/7650268
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": 7650268,
+  "name": "name-7650268",
+  "createdAt": "2018-04-16T18:30:00.000Z",
+  "createdBy": "createdBy.4jyzg@example.net",
+  "modifiedAt": "2010-05-05T18:30:00.000Z",
+  "modifiedBy": "modifiedBy.4jyzg@example.com"
+}
+
+
+### AdminService.Authors
+DELETE {{server}}/odata/v4/admin/Authors/7650268
+Content-Type: application/json
+{{auth}}
